@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Đăng nhập</title>
+	<title>huyentrangbooks.com-hân hạnh phục vụ</title>
 	<LINK REL="SHORTCUT ICON"  HREF="img/logo.png">
 	<link rel="stylesheet" href="css/bootstrap.min.css" >
 	<link rel="stylesheet" href="css/webstyle.css">
