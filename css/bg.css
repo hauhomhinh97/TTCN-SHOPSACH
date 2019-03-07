@@ -1,0 +1,11 @@
+.col-md-12.banggia h2, .HuongDan h2{
+	text-transform: uppercase;
+	color: red;
+	font-family: Garamond;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+.HuongDan h4{
+	margin-left: 50px;
+
+}

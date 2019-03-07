@@ -1,0 +1,26 @@
+.container h2{
+	text-transform: uppercase;
+    color: red;
+    font-family: Garamond;
+    font-weight: bold;
+    margin-bottom: 50px;
+    border-bottom: 5px solid #666; 
+}
+.form-control.ttkh{
+	margin-left: 10px;
+	width: 130%;
+
+}
+.col-md-6.ttkh{
+	padding-left: 0;
+}
+.input-group.ttkh h4{
+	color: #8700ff;
+	font-weight: bold;
+}
+.col-md-6.BillDetail{
+	border-bottom: 2px dotted #666;
+}
+.col-md-6.BillDetail h5{
+	line-height: 50px;
+}

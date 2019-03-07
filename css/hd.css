@@ -1,0 +1,11 @@
+.col-md-12.title h2{
+	text-transform: uppercase;
+	color: red;
+	font-family: Garamond;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+.btn.btn-info.btn-lg{
+	width: 100%;
+	text-align: left;
+}

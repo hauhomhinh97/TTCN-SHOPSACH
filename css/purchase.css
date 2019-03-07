@@ -1,0 +1,22 @@
+.col-md-12.title h2{
+	text-transform: uppercase;
+	color: red;
+	font-family: Garamond;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+.phanloai ul li{
+	font-size: 18px;
+}
+.thumbnail{
+	position: relative;
+	width: 235px; height: 379px;
+}
+.thumbnail .btn.btn-info{
+	position: absolute;
+	width: 90%;
+    bottom: 13px;
+}
+.thumbnail img{
+	width: 242px; height: 161px;
+}
