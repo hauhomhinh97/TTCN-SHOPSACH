@@ -75,6 +75,12 @@
 			$query = $this->conn->query($sql);
 			return $query;
 		}
+		public function getvote($id){
+			$ma_kh = $_SESSION['ma_kh'];
+			$sql = "SELECT * FROM vote_sach WHERE ma_kh='$ma_kh' AND ma_sach='$id'";
+			$query = $this->conn->query($sql);
+			return $query->num_rows;
+		}
 		public function star($id,$star){
 			$ma_kh = $_SESSION['ma_kh'];
 			$sql = "INSERT INTO `vote_sach` VALUES ('','$ma_kh','$id','$star')";
@@ -154,7 +160,7 @@
 			return $query;
 		}
 		public function hdgiam($id){
-			$sql = "UPDATE donhang SET soluong=soluong-1 WHERE ma_hd='$id'";
+			$sql = "UPDATE donhang SET soluong=soluong-1 WHERE ma_hd='$id' AND soluong>1";
 			$query = $this->conn->query($sql);
 			return $query;
 		}

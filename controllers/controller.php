@@ -272,6 +272,7 @@ class controller
 	public function chitiet(){
 		$id=$_GET['id_sach'];
 		$chitiet = $this->model->chitiet($id);
+		$getvote = $this->model->getvote($id);
 		$count['1'] = $this->model->count_sao($id, $sao = 1)['dem'];
 		$count['2'] = $this->model->count_sao($id, $sao = 2)['dem'];
 		$count['3'] = $this->model->count_sao($id, $sao = 3)['dem'];
@@ -308,7 +309,7 @@ class controller
 			$this->model->star($id,$star);
 			header('location: index.php?id_sach='.$id.'&action=chitiet');
 		}
-		$this->view->chitiet($chitiet,$sanpham_tiengviet,$cmt,$count);
+		$this->view->chitiet($chitiet,$sanpham_tiengviet,$cmt,$count,$getvote);
 
 	}
 	public function cart(){

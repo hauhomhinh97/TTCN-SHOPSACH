@@ -16,7 +16,7 @@
 		public function editpass(){
 			include_once('res/admin/doimatkhau.php');
 		}
-		public function chitiet($chitiet,$sanpham_tiengviet,$cmt,$count){
+		public function chitiet($chitiet,$sanpham_tiengviet,$cmt,$count,$getvote){
 			include_once('res/thongtinchitiet.php');
 		}
 		public function cart($giohang){

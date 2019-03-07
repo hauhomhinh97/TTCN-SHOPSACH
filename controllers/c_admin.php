@@ -296,8 +296,16 @@ class admin
 		}
 	}
 	public function addd_user($taikhoan_kh,$md5_pass,$ten_kh,$email_kh,$sdt_kh,$diachi_kh,$quyen_kh,$ngaysinh_kh,$gioitinh_kh){
-		$this->model->addd_user($taikhoan_kh,$md5_pass,$ten_kh,$email_kh,$sdt_kh,$diachi_kh,$quyen_kh,$ngaysinh_kh,$gioitinh_kh);
-		echo("<script>location.href = 'admin.php?action=listuser';</script>");
+			$nameRegex ='/^[a-zA-Z0-9]+$/';
+			$validfirstUsername = preg_match($nameRegex, $taikhoan_kh);
+			if($validUsername == null){
+				echo '<script>alert("Tài khoản không được chứa ký tự đặc biệt")</script>';
+			}else{
+				$this->model->addd_user($taikhoan_kh,$md5_pass,$ten_kh,$email_kh,$sdt_kh,$diachi_kh,$quyen_kh,$ngaysinh_kh,$gioitinh_kh);
+				echo("<script>location.href = 'admin.php?action=listuser';</script>");
+			}
+
+		
 	}
 	public function adddh(){
 		$showuser = $this->model->showuser();
@@ -312,9 +320,6 @@ class admin
 			echo("<script>location.href = 'admin.php?action=listdh';</script>");
 		}
 	}
-	
-
-
 }
 
 ?>

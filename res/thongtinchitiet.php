@@ -137,6 +137,7 @@
 				</div>
 				<div class="panel-body">
 					<div class="overflow col-md-12">
+						<?php if(isset($_SESSION['login'])&&$getvote<1){ ?>
 						<div class="hiencmt">
 							<p>
 								<div class="stars">
@@ -145,7 +146,6 @@
 										<input value="5" class="star star-5" id="star-5" type="radio" name="star"/>
 										<label class="star star-5" for="star-5"></label>
 										<input value="4" class="star star-4" id="star-4" type="radio" name="star"/>
-										
 										<label class="star star-4" for="star-4"></label>
 										<input value="3" class="star star-3" id="star-3" type="radio" name="star"/>
 										<label class="star star-3" for="star-3"></label>
@@ -157,6 +157,13 @@
 								</div>
 							</p>
 						</div>
+					<?php } if (isset($_SESSION['login'])&&$getvote>0) { ?>
+						<div class="hiencmt">
+							<p>
+								<span>Cảm ơn bạn đã đánh giá!</span>
+							</p>
+						</div>
+					<?php } ?>
 						<div class="hiencmt">
 							<p><span style="color: #187ffe;"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>(<?php echo $count['5']; ?>)</p>
 							<p><span style="color: #187ffe;"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>(<?php echo $count['4']; ?>)</p>
