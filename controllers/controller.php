@@ -16,15 +16,7 @@ class controller
 		$sanpham_tiengviet = $this->model->sanpham_tiengviet();
 		$sanpham_tienganh = $this->model->sanpham_tienganh();
 		$sanpham_noibat = $this->model->sanpham_noibat();
-		// if(isset($_POST['btn-search'])){
-		// 	$key=$_POST['search'];
-		// 	$key = strip_tags($key);
-		// 	$key = addslashes($key);
-		// 	$this->search($key);
-		// }
-		// else{
-			$this->view->home($sanpham_moi,$sanpham_tiengviet,$sanpham_tienganh,$sanpham_noibat);
-		// }
+		$this->view->home($sanpham_moi,$sanpham_tiengviet,$sanpham_tienganh,$sanpham_noibat);
 	}
 	public function searchtest(){
 		if(isset($_POST['search'])){
@@ -49,35 +41,41 @@ class controller
 		}
 		$form = ($trang-1)*$sotk1trang;
 		$home = $this->model->home($key,$form,$sotk1trang);
+		var_dump($search);die();
 
 		$this->view->search($key,$search,$home,$sotk1trang,$sotrang);
 	}
 
 	public function searchmoi(){
+		$home = $this->model->searchmoi();
 		$search = $this->model->searchmoi();
 		if(isset($_POST['btn-search'])){
+			echo "string";die();
 			$key=$_POST['search'];
 			$key = strip_tags($key);
 			$key = addslashes($key);
 			$this->search($key);
 		}
 		else{
-			$this->view->search($search);
+			$this->view->search(null,$search,$home,null,null);
 		}
 	}
 	public function searchnoibat(){
+		$home = $this->model->searchnoibat();
 		$search = $this->model->searchnoibat();
 		if(isset($_POST['btn-search'])){
 			$key=$_POST['search'];
 			$key = strip_tags($key);
 			$key = addslashes($key);
+			var_dump($key);die();
 			$this->search($key);
 		}
 		else{
-			$this->view->search($search);
+			$this->view->search(null,$search,$home,null,null);
 		}
 	}
 	public function searchanh(){
+		$home = $this->model->searchanh();
 		$search = $this->model->searchanh();
 		if(isset($_POST['btn-search'])){
 			$key=$_POST['search'];
@@ -86,10 +84,11 @@ class controller
 			$this->search($key);
 		}
 		else{
-			$this->view->search($search);
+			$this->view->search(null,$search,$home,null,null);
 		}
 	}
 	public function searchviet(){
+		$home = $this->model->searchviet();
 		$search = $this->model->searchviet();
 		if(isset($_POST['btn-search'])){
 			$key=$_POST['search'];
@@ -98,7 +97,7 @@ class controller
 			$this->search($key);
 		}
 		else{
-			$this->view->search($search);
+			$this->view->search(null,$search,$home,null,null);
 		}
 	}
 	//Đăng ký
@@ -144,6 +143,7 @@ class controller
 			$password_user=md5($password_user);
 			if($this->model->login($username_user,$password_user)){
 				$_SESSION['login'] = $username_user;
+				$_SESSION['message'] = "Đăng nhập thành công!";
 				header('location:index.php');
 
 			}

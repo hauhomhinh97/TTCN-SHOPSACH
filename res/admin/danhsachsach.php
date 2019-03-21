@@ -78,7 +78,7 @@
                         <div class="col-xl-9 col-lg-8">
                             <div class="card">
                                 <div class="container">
-                                    <h2>Danh sách Sách</h2>
+                                    <h2>Danh sách Sách <span style="color: red"><?php if(isset($_SESSION['mesage'])){echo $_SESSION['mesage'];unset($_SESSION['mesage']);} ?></span></h2>
                                     <p></p>            
                                     <table id="dataTable" class="table table-striped">
                                         <thead>
@@ -103,12 +103,12 @@
                                                 <td><?php echo $row['ten_sach'] ?></td>
                                                 <td><?php echo $row['ten_tg'] ?></td>
                                                 <td><?php echo number_format($row['gia_ban']) ?></td>
-                                                <td><img src="img/<?php echo $row['anh_bia'] ?>" alt=""></td>
+                                                <td style="width: 120px;"><img src="img/<?php echo $row['anh_bia'] ?>" alt=""></td>
                                                 <td><?php echo date_format(date_create($row['ngay_cap_nhat']),"d-m-Y") ?></td>
                                                 <td><?php echo $row['so_luong_ton'] ?></td>
                                                 <td><?php echo $row['ten_nxb'] ?></td>
                                                 <td><?php echo $row['ten_chude'] ?></td> 
-                                                <td><a href="admin.php?id=<?php echo $row['ma_sach'] ?>&action=editbook">Sửa</a> | <a href="admin.php?id=<?php echo $row['ma_sach'] ?>&action=deletebook">Xóa</a></td> 
+                                                <td style="width: 64px;"><a href="admin.php?id=<?php echo $row['ma_sach'] ?>&action=editbook">Sửa</a> | <a onclick="return confirm('Bạn có chắc muốn loại bỏ cuốn sách này')" href="admin.php?id=<?php echo $row['ma_sach'] ?>&action=deletebook">Xóa</a></td> 
                                             </tr>
                                             
                                             

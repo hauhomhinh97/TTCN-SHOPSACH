@@ -346,33 +346,38 @@
 			return $query;
 		}
 		public function addd_user($taikhoan_kh,$md5_pass,$ten_kh,$email_kh,$sdt_kh,$diachi_kh,$quyen_kh,$ngaysinh_kh,$gioitinh_kh){
-			$sql = "INSERT INTO taikhoan VALUES('','$taikhoan_kh','$md5_pass','$email_kh','$ten_kh','anhnguoidung.jpg','$diachi_kh','$sdt_kh','$gioitinh_kh','$ngaysinh_kh',$quyen_kh)";
+			$sql = "INSERT INTO `taikhoan`(`taikhoan_kh`, `matkhau_kh`, `email_kh`, `ten_kh`, `anh_kh`, `diachi_kh`, `sdt_kh`, `gioitinh_kh`, `ngaysinh_kh`, `quyen_kh`) VALUES ('$taikhoan_kh','$md5_pass','$email_kh','$ten_kh','anhnguoidung.jpg','$diachi_kh','$sdt_kh','$gioitinh_kh','$ngaysinh_kh',$quyen_kh)";
+			$_SESSION['mesage']="Tài khoản $taikhoan_kh đã được thêm!";
 			$query = $this->conn->query($sql);
 			return $query;
 		}
 		public function add_book($ten_sach,$gia_ban,$anh_bia,$so_luong_ton,$ma_nxb,$ma_chu_de,$ma_tg,$mo_ta){
-			$sql = "INSERT INTO sach VALUES('','$ten_sach','$gia_ban','$mo_ta','$anh_bia',NOW(),'$so_luong_ton','$ma_nxb','$ma_chu_de','0','$ma_tg')";
-			var_dump($sql);die();
+			$sql = "INSERT INTO `sach`(`ten_sach`, `gia_ban`, `mo_ta`, `anh_bia`, `ngay_cap_nhat`, `so_luong_ton`, `ma_nxb`, `ma_chu_de`, `chuot`, `ma_tg`) VALUES('$ten_sach','$gia_ban','$mo_ta','$anh_bia',NOW(),'$so_luong_ton','$ma_nxb','$ma_chu_de','0','$ma_tg')";
+			$_SESSION['mesage']="Sách $ten_sach đã được thêm!";
 			$query = $this->conn->query($sql);
 			return $query;
 		}
 		public function addtg($ten_tg,$diachi_tg,$sdt_tg,$tieusu){
 			$sql = "INSERT INTO tacgia VALUES ('','$ten_tg','$diachi_tg','$tieusu','$sdt_tg')";
+			$_SESSION['mesage']="Tác giả $ten_tg đã được thêm!";
 			$query = $this->conn->query($sql);
 			return $query;
 		}
 		public function addnxb($ten_nxb,$dia_chi,$sdt_nxb){
 			$sql = "INSERT INTO nhaxuatban VALUES('','$ten_nxb','$dia_chi','$sdt_nxb')";
+			$_SESSION['mesage']="NXB $ten_nxb đã được thêm!";
 			$query = $this->conn->query($sql);
 			return $query;
 		}
 		public function addcd($ten_chude){
 			$sql = "INSERT INTO chude VALUES('','$ten_chude')";
+			$_SESSION['mesage']="Chủ đề $ten_chude đã được thêm!";
 			$query = $this->conn->query($sql);
 			return $query;
 		}
 		public function adddh($ma_kh,$ma_sach,$soluong){
 			$sql = "INSERT INTO donhang VALUES('','$ma_sach','$soluong','0','1',NOW(),'$ma_kh')";
+			$_SESSION['mesage']="Đơn hàng đã được thêm!";
 			$query = $this->conn->query($sql);
 			return $query;
 		}
@@ -397,7 +402,7 @@
 			return $query;
 		}
 		public function listbook(){
-			$sql = "SELECT sach.*,tacgia.*, chude.*, nhaxuatban.* FROM sach, nhaxuatban, tacgia, chude WHERE sach.ma_chu_de = chude.ma_chu_de AND sach.ma_NXB = nhaxuatban.ma_NXB AND sach.ma_tg=tacgia.ma_tg";
+			$sql = "SELECT sach.*,tacgia.*, chude.*, nhaxuatban.* FROM sach, nhaxuatban, tacgia, chude WHERE sach.ma_chu_de = chude.ma_chu_de AND sach.ma_NXB = nhaxuatban.ma_NXB AND sach.ma_tg=tacgia.ma_tg ORDER BY ma_sach DESC";
 			$query = $this->conn->query($sql);
 			return $query;
 		}

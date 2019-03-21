@@ -78,7 +78,7 @@
                         <div class="col-xl-9 col-lg-8">
                             <div class="card">
                                 <div class="container">
-                                    <h2>Danh sách nhà xuất bản</h2>
+                                    <h2>Danh sách nhà xuất bản <span style="color: red"><?php if(isset($_SESSION['mesage'])){echo $_SESSION['mesage'];unset($_SESSION['mesage']);} ?></span></h2>
                                     <p></p>            
                                     <table id="dataTable" class="table table-striped">
                                         <thead>

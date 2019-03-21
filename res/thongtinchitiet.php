@@ -39,12 +39,12 @@
 							
 							<div class="input-group SoLuong">
 								<span class="input-group-addon">Chọn số lượng:</span>
-								<input style="height: 36px;" type="number" name="solgmh" class="form-control" placeholder="VD: 1" id="solg" required="" value="1">
+								<input style="height: 36px;" type="number" name="solgmh" class="form-control" placeholder="VD: 1" id="solg" required="" min="1" value="1">
 								<span class="input-group-addon">Cuốn</span>
 							</div>
 							<br>
 							<?php if(isset($_SESSION['login'])){
-								echo "<button type='submit' id='button' name='btn-submit' class='btn btn-success' onclick='addcart()'>
+								echo "<button type='submit' id='button' name='btn-submit' class='btn btn-success' >
 								<i class='glyphicon glyphicon-shopping-cart'></i> Thêm vào giỏ
 								</button>";
 							}

@@ -15,6 +15,7 @@
 	<div class="header">
 		<?php include('includes/header.php') ?>
 	</div>
+
 	<section class="banner">
 		<?php 
 			include "includes/banner_index.php" 

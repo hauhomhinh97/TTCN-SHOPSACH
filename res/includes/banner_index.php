@@ -1,4 +1,7 @@
 <div class="container" id="banner">
+	<?php if(isset($_SESSION['message'])){ ?>
+		<p style="color: red; text-align: center; font-size: 25px;"><?php echo $_SESSION['message']; ?></p>
+	<?php }; unset($_SESSION['message']); ?>
 	<div class="row col-md-3">
 		<nav id="sidebar">
             <div class="sidebar-header">
