@@ -41,7 +41,6 @@ class controller
 		}
 		$form = ($trang-1)*$sotk1trang;
 		$home = $this->model->home($key,$form,$sotk1trang);
-		var_dump($search);die();
 
 		$this->view->search($key,$search,$home,$sotk1trang,$sotrang);
 	}

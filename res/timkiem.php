@@ -22,7 +22,7 @@
 					<?php while($row = $home->fetch_assoc()){ ?>
 						<div class="col-md-2">
 							<div class="thumbnail">
-								<a style="width: 140px; height: 204px;" href="index.php?id_sach=<?php echo $row['ma_sach'] ?>&action=chitiet"><img src="img/<?php echo $row['anh_bia'] ?>" alt="Sản phẩm 1"></a>
+								<a style="width: 140px; height: 204px;" href="index.php?id_sach=<?php echo $row['ma_sach'] ?>&action=chitiet"><img style="max-height: 200px;" src="img/<?php echo $row['anh_bia'] ?>" alt="Sản phẩm 1"></a>
 								<div class="">
 									<center>
 										<a href="" style="font-size: 16px;"><?php echo $row['ten_sach'] ?></a>

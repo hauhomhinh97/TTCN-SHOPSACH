@@ -70,6 +70,9 @@
 			case 'search2':
 				$controller->searchviet();
 				break;
+			case 'search3':
+				$controller->searchnoibat();
+				break;
 			case 'cart':
 				$controller->login();
 				break;
