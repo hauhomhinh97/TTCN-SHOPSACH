@@ -175,6 +175,7 @@
 			$query = $this->conn->query($sql);
 			if($query->num_rows>0){
 				$_SESSION['error'] = "Tài khoản này đã được sử dụng. Vui lòng chọn tài khoản khác!";
+				header('location:index.php?action=signin');
 			}
 			else{
 				return $query;

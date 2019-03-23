@@ -105,27 +105,30 @@ class controller
 		if (isset($_POST["btn_submit"])) {
 
 			$taikhoan_kh = $_POST["taikhoan_kh"];
-			$this->model->gettaikhoan($taikhoan_kh);
-			$matkhau_kh = $_POST["matkhau_kh"];
-			$ten_kh = $_POST["ten_kh"];
-			$email_kh = $_POST["email_kh"];
-			$sdt_kh = $_POST["sdt_kh"];
-			$diachi_kh = $_POST["diachi_kh"];
-			if(!empty($md5_pass)){
-				$md5_pass = md5($matkhau_kh);
-			}
+			if($this->model->gettaikhoan($taikhoan_kh)){
+				$matkhau_kh = $_POST["matkhau_kh"];
+				$ten_kh = $_POST["ten_kh"];
+				$email_kh = $_POST["email_kh"];
+				$sdt_kh = $_POST["sdt_kh"];
+				$diachi_kh = $_POST["diachi_kh"];
+				if(!empty($md5_pass)){
+					$md5_pass = md5($matkhau_kh);
+				}
 
 
 		//Kiểm tra điều kiện bắt buộc đối với các field không được bỏ trống
-			if ($taikhoan_kh == "" || $matkhau_kh == "" || $ten_kh == "" || $email_kh == "" || $sdt_kh == "" || $diachi_kh == "") {
-				$_SESSION['error'] = "Bạn vui lòng nhập đầy đủ thông tin!";
+				if ($taikhoan_kh == "" || $matkhau_kh == "" || $ten_kh == "" || $email_kh == "" || $sdt_kh == "" || $diachi_kh == "") {
+					$_SESSION['error'] = "Bạn vui lòng nhập đầy đủ thông tin!";
+				}
+				else{
+					$md5_pass = md5($matkhau_kh);
+					$this->model->signin($taikhoan_kh,$md5_pass,$ten_kh,$email_kh,$sdt_kh,$diachi_kh);
+					$_SESSION['sucess']="Chúc mừng! Đăng ký thành công.";
+					$_SESSION['login']="$taikhoan_kh";
+				}
+				header('location:index.php?action=signin');
 			}
-			else{
-				$this->model->signin($taikhoan_kh,$md5_pass,$ten_kh,$email_kh,$sdt_kh,$diachi_kh);
-				$_SESSION['sucess']="Chúc mừng! Đăng ký thành công.";
-				$_SESSION['login']="$taikhoan_kh";
-			}
-			header('location:index.php?action=signin');
+
 		}
 	}
 	//Đăng nhập
