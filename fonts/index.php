@@ -4,9 +4,9 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>404 - ERROR - Gạo Sịn</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="../css/webstsyle.css">
+	<title>404 - ERROR - Huyền Trang Book</title>
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../css/webstyle.css">
 	<link rel="stylesheet" href="../css/font-awesome.css">
 	<!-- 	<script src="ckeditor/ckeditor.js"></script> -->
 </head>

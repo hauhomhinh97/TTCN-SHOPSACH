@@ -55,12 +55,12 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <div class="search-box pull-left">
+                            <!-- <div class="search-box pull-left">
                                 <form action="#">
                                     <input type="text" name="search" placeholder="Search..." required>
                                     <i class="ti-search"></i>
                                 </form>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- profile info & task notification -->
                         <?php include('include/menu1.php') ?>
@@ -98,7 +98,7 @@
                                                 <td><?php echo $row['ten_nxb'] ?></td>
                                                 <td><?php echo $row['dia_chi'] ?></td>
                                                 <td><?php echo $row['sdt_nxb'] ?></td> 
-                                                <td><a href="admin.php?id=<?php echo $row['ma_nxb'] ?>&action=editnxb">Sửa</a> | <a href="admin.php?id=<?php echo $row['ma_nxb'] ?>&action=deletenxb">Xóa</a></td> 
+                                                <td style="font-size: 20px;"><a href="admin.php?id=<?php echo $row['ma_nxb'] ?>&action=editnxb"><i class="fa fa-edit"></i></a> | <a href="admin.php?id=<?php echo $row['ma_nxb'] ?>&action=deletenxb"><i class="fa fa-trash-o"></i></a></td> 
                                             </tr>
                                             <?php } ?>
                                         </tbody>

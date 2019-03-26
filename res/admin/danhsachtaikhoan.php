@@ -48,12 +48,12 @@
         <span></span>
         <span></span>
       </div>
-      <div class="search-box pull-left">
+      <!-- <div class="search-box pull-left">
         <form action="#">
          <input type="text" name="search" placeholder="Search..." required>
          <i class="ti-search"></i>
        </form>
-     </div>
+     </div> -->
    </div>
    <!-- profile info & task notification -->
    <?php include('include/menu1.php') ?>
@@ -101,7 +101,7 @@
         <td><?php echo $row['diachi_kh'] ?></td>
         <td><?php echo $row['sdt_kh'] ?></td>
         <td><?php if($row['quyen_kh']==1){ echo "Admin";}else{ echo "Khách hàng";} ?></td>	
-        <td><a href="admin.php?id=<?php echo $row['ma_kh'] ?>&action=edituser">Sửa</a> | <a onclick="return confirm('Bạn có chắc muốn xóa toàn bộ dữ liệu liên quan tới người dùng này!')" href="admin.php?id=<?php echo $row['ma_kh'] ?>&action=delete">Xóa</a></td>	
+        <td style="font-size: 20px;"><a href="admin.php?id=<?php echo $row['ma_kh'] ?>&action=edituser"><i class="fa fa-edit"></i></a> | <a onclick="return confirm('Bạn có chắc muốn xóa toàn bộ dữ liệu liên quan tới người dùng này!')" href="admin.php?id=<?php echo $row['ma_kh'] ?>&action=delete"><i class="fa fa-trash-o"></i></a></td>	
       </tr>
 
       

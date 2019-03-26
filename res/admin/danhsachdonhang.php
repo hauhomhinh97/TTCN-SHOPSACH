@@ -55,12 +55,12 @@
                                 <span></span>
                                 <span></span>
                             </div>
-                            <div class="search-box pull-left">
+                            <!-- <div class="search-box pull-left">
                                 <form action="#">
                                     <input type="text" name="search" placeholder="Search..." required>
                                     <i class="ti-search"></i>
                                 </form>
-                            </div>
+                            </div> -->
                         </div>
                         <!-- profile info & task notification -->
                         <?php include('include/menu1.php') ?>
@@ -124,20 +124,18 @@
                                                         }
                                                      ?>
                                                 </td>
-                                                <td>
+                                                <td style="font-size: 20px;">
                                                     <?php 
                                                         if($row['tinhtranggiaohang']==1){ 
-                                                            echo "<a href='admin.php?id=".$row['ma_hd']."&action=duyethd'>Duyệt</a>";
+                                                            echo "<a href='admin.php?id=".$row['ma_hd']."&action=duyethd'><i class='fa fa-paper-plane'></i></a>";
                                                         }
                                                         elseif($row['tinhtranggiaohang']==2){
-                                                            echo "<a href='admin.php?id=".$row['ma_hd']."&action=duyethd2'>Duyệt</a>";
+                                                            echo "<a href='admin.php?id=".$row['ma_hd']."&action=duyethd2'><i class='fa fa-paper-plane'></i></a>";
                                                         }
-                                                     ?><br>
-                                                        <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="admin.php?id=<?php echo $row['ma_hd'] ?>&action=deletehd">Xóa</a></td>
+                                                     ?> | <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="admin.php?id=<?php echo $row['ma_hd'] ?>&action=deletehd"><i class="fa fa-trash-o"></i></a></td>
                                             </tr>
                                         <?php } ?>
-                                        </tbody>
-                                       
+                                        </tbody>                                      
                                     </table>
                                 </div>
                             </div>

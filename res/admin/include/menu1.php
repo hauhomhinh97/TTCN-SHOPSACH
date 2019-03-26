@@ -1,5 +1,5 @@
 <div class="col-md-6 col-sm-4 clearfix">
-                        <ul class="notification-area pull-right">
+                        <!-- <ul class="notification-area pull-right">
                             <li id="full-view"><i class="ti-fullscreen"></i></li>
                             <li id="full-view-exit"><i class="ti-zoom-out"></i></li>
                             <li class="dropdown">
@@ -142,5 +142,5 @@
                             <li class="settings-btn">
                                 <i class="ti-settings"></i>
                             </li>
-                        </ul>
+                        </ul> -->
                     </div>
