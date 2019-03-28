@@ -29,7 +29,7 @@
 					<div class="col-md-4">
 						<legend><h2><?php echo $row['ten_sach'] ?></h2></legend>
 						<h6 style="float: right; margin-top: -15px;font-style: italic;color: red;">Lượt xem: <?php echo $row['chuot'] ?></h6>
-						<h4>Tác giả: <?php echo $row['ten_tg'] ?></h4>
+						<h4>Tác giả: <a href=""><?php echo $row['ten_tg'] ?></a></h4>
 						<input type="hidden" name="tenmh" value="<?php echo $data['ten_sp']; ?>">
 						<div class="form-group">
 							<h4>Đánh Giá: <span style="color: #187ffe;"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i></span></h4>

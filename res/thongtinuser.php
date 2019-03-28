@@ -103,12 +103,10 @@
 						<a style="width: 100%" href="index.php?action=login"><button type="button" class="btn btn-default">Xem Thông Tin Cá Nhân<i class="glyphicon glyphicon-user"></i></button></a><br><br>
 						<?php 
 						if ($data['quyen_kh'] == 1) {
-							echo "<a style='width: 100%' href='admin.php' class='btn btn-danger' role='button'>Admin Panel <i class='glyphicon glyphicon-lock'></i></a>";
-						}
-						else{
-							echo "<a style='width: 100%' href='index.php?action=editpass' class='btn btn-success' role='button'>Đổi mật khẩu <i class='glyphicon glyphicon-lock'></i></a>";
-						}
-						?>
+							echo "<a style='width: 100%' href='admin.php' class='btn btn-danger' role='button'>Admin Panel <i class='glyphicon glyphicon-lock'></i></a><br><br>";
+						} ?>
+
+						<a style='width: 100%' href='index.php?action=editpass' class='btn btn-success' role='button'>Đổi mật khẩu <i class='glyphicon glyphicon-lock'></i></a>
 						<br><br>
 						<form action="" method="POST">
 							<a style="width: 100%" href="index.php?action=cart" class="btn btn-info" role="button">Xem đơn hàng<i class="glyphicon glyphicon-folder-open"></i></a>
