@@ -319,9 +319,29 @@
 			$query = $this->conn->query($sql);
 			return $query;
 		}
+		public function delete_user1($id){
+			$sql = "DELETE FROM vote_sach WHERE ma_kh='$id'" ;
+			$query = $this->conn->query($sql);
+			return $query;
+		}
+		public function delete_user2($id){
+			$sql = "DELETE FROM cmt WHERE ma_kh='$id'" ;
+			$query = $this->conn->query($sql);
+			return $query;
+		}
 		public function delete_user($id){
 			$sql = "DELETE FROM taikhoan WHERE ma_kh='$id' AND taikhoan_kh != 'admin' AND quyen_kh != '1'";
 			// DELETE FROM donhang WHERE ma_kh='$id' ;
+			$query = $this->conn->query($sql);
+			return $query;
+		}
+		public function delete_book_vote($id){
+			$sql = "DELETE FROM vote_sach WHERE ma_sach='$id'";
+			$query = $this->conn->query($sql);
+			return $query;
+		}
+		public function delete_book_cmt($id){
+			$sql = "DELETE FROM cmt WHERE ma_sach='$id'";
 			$query = $this->conn->query($sql);
 			return $query;
 		}

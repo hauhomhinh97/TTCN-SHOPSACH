@@ -195,12 +195,16 @@ class admin
 	public function delete_user(){
 		$id=$_GET['id'];
 		$this->model->deleteuser($id);
+		$this->model->delete_user1($id);
+		$this->model->delete_user2($id);
 		$this->model->delete_user($id);
 		header('location:admin.php?action=listuser');
 
 	}
 	public function delete_book(){
 		$id=$_GET['id'];
+		$this->model->delete_book_vote($id);
+		$this->model->delete_book_cmt($id);
 		$this->model->delete_book($id);
 		header('location:admin.php?action=listbook');
 	}

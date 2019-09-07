@@ -100,7 +100,7 @@
                                                     <td><?php echo $row['diachi_tg'] ?></td>
                                                     <td><?php echo $row['tieusu'] ?></td>
                                                     <td><?php echo $row['sdt_tg'] ?></td> 
-                                                    <td style="font-size: 20px;"><a href="admin.php?id=<?php echo $row['ma_tg'] ?>&action=edittg"><i class="fa fa-edit"></i></a> | <a onclick="return confirm('Xóa toàn bộ thông tin có liên quan')" href="admin.php?id=<?php echo $row['ma_tg'] ?>&action=deletetg"><i class="fa fa-trash-o"></i></a></td> 
+                                                    <td style="font-size: 20px;"><a title="Sửa tác giả" href="admin.php?id=<?php echo $row['ma_tg'] ?>&action=edittg"><i class="fa fa-edit"></i></a> | <a onclick="return confirm('Xóa toàn bộ thông tin có liên quan')" title="Xóa tác giả" href="admin.php?id=<?php echo $row['ma_tg'] ?>&action=deletetg"><i class="fa fa-trash-o"></i></a></td> 
                                                 </tr>
                                                 
                                                 

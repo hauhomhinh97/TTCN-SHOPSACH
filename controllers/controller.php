@@ -298,7 +298,9 @@ class controller
 			}
 		}
 		if (isset($_POST['cmt'])) {
-			$noidung_cmt = $_POST['noidung_cmt'];
+			$noidung_cmt = strip_tags($_POST['noidung_cmt']);
+			$noidung_cmt = addslashes($_POST['noidung_cmt']);
+
 			$this->model->createcmt($id,$noidung_cmt);
 			header('location: index.php?id_sach='.$id.'&action=chitiet');
 		}

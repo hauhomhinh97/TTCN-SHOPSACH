@@ -127,12 +127,12 @@
                                                 <td style="font-size: 20px;">
                                                     <?php 
                                                         if($row['tinhtranggiaohang']==1){ 
-                                                            echo "<a href='admin.php?id=".$row['ma_hd']."&action=duyethd'><i class='fa fa-paper-plane'></i></a>";
+                                                            echo "<a title='Duyệt' href='admin.php?id=".$row['ma_hd']."&action=duyethd'><i class='fa fa-paper-plane'></i></a>";
                                                         }
                                                         elseif($row['tinhtranggiaohang']==2){
-                                                            echo "<a href='admin.php?id=".$row['ma_hd']."&action=duyethd2'><i class='fa fa-paper-plane'></i></a>";
+                                                            echo "<a title='Duyệt' href='admin.php?id=".$row['ma_hd']."&action=duyethd2'><i class='fa fa-paper-plane'></i></a>";
                                                         }
-                                                     ?> | <a onclick="return confirm('Bạn có chắc muốn xóa?')" href="admin.php?id=<?php echo $row['ma_hd'] ?>&action=deletehd"><i class="fa fa-trash-o"></i></a></td>
+                                                     ?> | <a title="Xóa" onclick="return confirm('Bạn có chắc muốn xóa?')" href="admin.php?id=<?php echo $row['ma_hd'] ?>&action=deletehd"><i class="fa fa-trash-o"></i></a></td>
                                             </tr>
                                         <?php } ?>
                                         </tbody>                                      
